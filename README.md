@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## See Live on App Engine
+
+Click [here](https://drum-machine-dot-portfolio-272305.appspot.com/) to view live project.
 
 ## Available Scripts
 
