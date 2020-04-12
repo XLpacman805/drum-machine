@@ -1,0 +1,27 @@
+#drum-machine {
+    background-color: #282c34;
+    color: white;
+    width: 60vw;
+    height: 50vh;
+  }
+
+  .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3,33%);
+      grid-template-rows: repeat(3, 33%);
+  }
+
+  .grid-item-one {
+    grid-column: 1 / 1;
+    grid-row: 1;
+  }
+
+  .grid-item-two {
+    grid-column: 2 / 2;
+    grid-row: 1;
+  }
+
+  .grid-item-three {
+      grid-column: 3 / 3;
+      grid-row: 1;
+  }
