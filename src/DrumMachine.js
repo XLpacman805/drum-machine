@@ -15,6 +15,14 @@ class DrumMachine extends React.Component {
                     <div className="grid-item-one">Q</div>
                     <div className="grid-item-two">W</div>
                     <div className="grid-item-three">E</div>
+
+                    <div className="grid-item-four">A</div>
+                    <div className="grid-item-five">S</div>
+                    <div className="grid-item-six">D</div>
+
+                    <div className="grid-item-seven">Z</div>
+                    <div className="grid-item-eight">X</div>
+                    <div className="grid-item-nine">C</div>
                 </div>
             </div>
          );

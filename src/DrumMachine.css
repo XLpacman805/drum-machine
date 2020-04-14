@@ -8,7 +8,7 @@
   .grid-container {
       display: grid;
       grid-template-columns: repeat(3,33%);
-      grid-template-rows: repeat(3, 33%);
+      grid-template-rows: repeat(3, 80%);
   }
 
   .grid-item-one {
@@ -25,3 +25,33 @@
       grid-column: 3 / 3;
       grid-row: 1;
   }
+
+  .grid-item-four {
+    grid-column: 1 / 1;
+    grid-row: 2;
+}
+
+  .grid-item-five {
+    grid-column: 2 / 2;
+    grid-row: 2;
+  }
+
+  .grid-item-six {
+    grid-column: 3 / 3;
+    grid-row: 2;
+}
+
+.grid-item-seven {
+  grid-column: 1 / 1;
+  grid-row: 3;
+}
+
+.grid-item-eight {
+  grid-column: 2 / 2;
+  grid-row: 3;
+}
+
+.grid-item-nine {
+  grid-column: 3 / 3;
+  grid-row: 3;
+}
