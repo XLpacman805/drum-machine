@@ -1,11 +1,13 @@
 #drum-machine {
     background-color: #282c34;
     color: white;
-    width: 60vw;
+    width: 80vw;
     height: 50vh;
   }
 
   .grid-container {
+      padding-left: 10%;
+      padding-right: 10%;
       display: grid;
       grid-template-columns: repeat(3,33%);
       grid-template-rows: repeat(3, 80%);
