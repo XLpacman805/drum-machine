@@ -2,7 +2,6 @@ import React from 'react';
 import Drumpad from './Drumpad'
 import './DrumMachine.css';
 import EightZeroEightDrumKit from './drumkits/808 Extended/808ExtendedDrumKit';
-// import audioPath from './drumkits/808 Extended/808-bd01.wav';
 
 class DrumMachine extends React.Component {
     constructor(props) {
