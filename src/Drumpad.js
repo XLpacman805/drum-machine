@@ -9,6 +9,8 @@ class Drumpad extends React.Component {
 
     onClick (event) {
         console.log(event.target.value);
+        let audio = new Audio(this.props.audioPath);
+        audio.play();
     }
 
     render() {
