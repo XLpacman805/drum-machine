@@ -1,4 +1,5 @@
 import React from 'react';
+import Drumpad from './Drumpad'
 import './DrumMachine.css';
 
 class DrumMachine extends React.Component {
@@ -11,6 +12,7 @@ class DrumMachine extends React.Component {
         return ( 
             <div id="drum-machine">
                 <h2>Drumming Machine World</h2>
+                <Drumpad />
                 <div className="grid-container">
                     <button className="grid-item-one">Q</button>
                     <button className="grid-item-two">W</button>
