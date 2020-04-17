@@ -1,7 +1,8 @@
 import React from 'react';
 import Drumpad from './Drumpad'
 import './DrumMachine.css';
-import audioPath from './drumkits/808 Extended/808-bd01.wav';
+import EightZeroEightDrumKit from './drumkits/808 Extended/808ExtendedDrumKit';
+// import audioPath from './drumkits/808 Extended/808-bd01.wav';
 
 class DrumMachine extends React.Component {
     constructor(props) {
@@ -14,8 +15,8 @@ class DrumMachine extends React.Component {
             <div id="drum-machine">
                 <h2>Drumming Machine World</h2>
                 <div className="grid-container">
-                    <Drumpad className="grid-item-one" text="Q" audioPath={audioPath} />
-                    <Drumpad className="grid-item-two" text="W"/>
+                    <Drumpad className="grid-item-one" text="Q" audioPath={EightZeroEightDrumKit[0]} />
+                    <Drumpad className="grid-item-two" text="W" audioPath={EightZeroEightDrumKit[0]} />
                     <Drumpad className="grid-item-three" text="E" />
 
                     <Drumpad className="grid-item-four" text="A" />
