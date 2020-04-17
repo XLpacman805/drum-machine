@@ -12,19 +12,18 @@ class DrumMachine extends React.Component {
         return ( 
             <div id="drum-machine">
                 <h2>Drumming Machine World</h2>
-                <Drumpad />
                 <div className="grid-container">
-                    <button className="grid-item-one">Q</button>
-                    <button className="grid-item-two">W</button>
-                    <button className="grid-item-three">E</button>
+                    <Drumpad className="grid-item-one" text="Q" />
+                    <Drumpad className="grid-item-two" text="W"/>
+                    <Drumpad className="grid-item-three" text="E" />
 
-                    <button className="grid-item-four">A</button>
-                    <button className="grid-item-five">S</button>
-                    <button className="grid-item-six">D</button>
+                    <Drumpad className="grid-item-four" text="A" />
+                    <Drumpad className="grid-item-five" text="S" />
+                    <Drumpad className="grid-item-six" text="D" />
 
-                    <button className="grid-item-seven">Z</button>
-                    <button className="grid-item-eight">X</button>
-                    <button className="grid-item-nine">C</button>
+                    <Drumpad className="grid-item-seven" text="Z" />
+                    <Drumpad className="grid-item-eight" text="X" />
+                    <Drumpad className="grid-item-nine" text="C" />
                 </div>
             </div>
          );

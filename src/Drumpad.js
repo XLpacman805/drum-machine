@@ -8,7 +8,7 @@ class Drumpad extends React.Component {
 
     render() {
         return (
-            <h1>This is a Drumpad</h1>
+            <button className={this.props.className}>{this.props.text}</button>
         );
     }
 }
