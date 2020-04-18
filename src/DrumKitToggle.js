@@ -1,4 +1,5 @@
 import React from 'react';
+import './DrumKitToggle.css'
 
 class DrumKitToggle extends React.Component {
     constructor(props) {
@@ -9,7 +10,12 @@ class DrumKitToggle extends React.Component {
     render() {
         return (
             <div>
-                <h1>DrumKitToggle</h1>
+                <div class="left-of-switch">Drum Kit A</div>
+                <label class="switch">
+                    <input type="checkbox"></input>
+                    <span class="slider round"></span>
+                </label>
+                <div class="right-of-switch">Drum Kit B</div>
             </div>
         )
     }
