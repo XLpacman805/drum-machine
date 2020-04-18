@@ -10,6 +10,70 @@ class DrumMachine extends React.Component {
         this.state = {
             activeDrumKit: EightZeroEightDrumKit
         };
+        this.handleKeyDown = this.handleKeyDown.bind(this);
+    }
+
+    handleKeyDown(event) {
+        /**
+         * Responsible for determing if the string passed is a valid key. 
+         * @param {String} eventKey - the key pressed on the user's keyboard. 
+         * @returns {Boolean}
+         */
+        function isValidKey(eventKey) {
+            switch (eventKey) {
+                case("q"):
+                    return true;
+                case("Q"):
+                    return true;    
+                case("w"):
+                    return true;
+                case("W"):
+                    return true;
+                case ("e"):
+                    return true;
+                case("E"):
+                    return true;
+                case("a"):
+                    return true;
+                case("A"):
+                    return true;
+                case("s"):
+                    return true;
+                case("S"):
+                    return true;
+                case("d"):
+                    return true;
+                case("D"):
+                    return true
+                case("z"):
+                    return true;
+                case("Z"):
+                    return true;
+                case("x"):
+                    return true;
+                case("X"):
+                    return true;
+                case("c"):
+                    return true;
+                case("C"):
+                    return true;
+                default:
+                    return false;  
+            }
+        }
+
+        if (isValidKey(event.key)) {
+            document.getElementById(event.key.toLowerCase()).click();
+        }
+    }
+
+    componentDidMount() {
+        document.addEventListener('keydown', this.handleKeyDown);
+
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('keydown');
     }
 
     render() {
@@ -17,17 +81,17 @@ class DrumMachine extends React.Component {
             <div id="drum-machine">
                 <h2>Drumming Machine World</h2>
                 <div className="grid-container">
-                    <Drumpad className="grid-item-one" text="Q" audioPath={this.state.activeDrumKit[0]} />
-                    <Drumpad className="grid-item-two" text="W" audioPath={this.state.activeDrumKit[1]} />
-                    <Drumpad className="grid-item-three" text="E" audioPath={this.state.activeDrumKit[2]}/>
+                    <Drumpad className="grid-item-one" text="q" audioPath={this.state.activeDrumKit[0]} />
+                    <Drumpad className="grid-item-two" text="w" audioPath={this.state.activeDrumKit[1]} />
+                    <Drumpad className="grid-item-three" text="e" audioPath={this.state.activeDrumKit[2]}/>
 
-                    <Drumpad className="grid-item-four" text="A" audioPath={this.state.activeDrumKit[3]} />
-                    <Drumpad className="grid-item-five" text="S" audioPath={this.state.activeDrumKit[4]} />
-                    <Drumpad className="grid-item-six" text="D" audioPath={this.state.activeDrumKit[5]} />
+                    <Drumpad className="grid-item-four" text="a" audioPath={this.state.activeDrumKit[3]} />
+                    <Drumpad className="grid-item-five" text="s" audioPath={this.state.activeDrumKit[4]} />
+                    <Drumpad className="grid-item-six" text="d" audioPath={this.state.activeDrumKit[5]} />
 
-                    <Drumpad className="grid-item-seven" text="Z" audioPath={this.state.activeDrumKit[6]} />
-                    <Drumpad className="grid-item-eight" text="X" audioPath={this.state.activeDrumKit[7]} />
-                    <Drumpad className="grid-item-nine" text="C" audioPath={this.state.activeDrumKit[8]} />
+                    <Drumpad className="grid-item-seven" text="z" audioPath={this.state.activeDrumKit[6]} />
+                    <Drumpad className="grid-item-eight" text="x" audioPath={this.state.activeDrumKit[7]} />
+                    <Drumpad className="grid-item-nine" text="c" audioPath={this.state.activeDrumKit[8]} />
                 </div>
             </div>
          );
