@@ -1,5 +1,6 @@
 import React from 'react';
-import Drumpad from './Drumpad'
+import Drumpad from './Drumpad';
+import DrumKitToggle from './DrumKitToggle';
 import './DrumMachine.css';
 import EightZeroEightDrumKit from './drumkits/808 Extended/808ExtendedDrumKit';
 import ElectroSoulDrumKit from './drumkits/Electro Soul Kit/ElectroSoulDrumKit';
@@ -80,6 +81,7 @@ class DrumMachine extends React.Component {
         return ( 
             <div id="drum-machine">
                 <h2>Drumming Machine World</h2>
+                <DrumKitToggle />
                 <div className="grid-container">
                     <Drumpad className="grid-item-one" text="q" audioPath={this.state.activeDrumKit[0]} />
                     <Drumpad className="grid-item-two" text="w" audioPath={this.state.activeDrumKit[1]} />
