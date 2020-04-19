@@ -5,17 +5,22 @@ class DrumKitToggle extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(event) {
+        console.log("clicked");
     }
 
     render() {
         return (
             <div>
-                <div class="left-of-switch">Drum Kit A</div>
-                <label class="switch">
+                <div className="left-of-switch">Drum Kit A</div>
+                <label className="switch">
                     <input type="checkbox"></input>
-                    <span class="slider round"></span>
+                    <span className="slider round" onClick={this.handleClick}></span>
                 </label>
-                <div class="right-of-switch">Drum Kit B</div>
+                <div className="right-of-switch">Drum Kit B</div>
             </div>
         )
     }
