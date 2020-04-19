@@ -65,7 +65,9 @@ class DrumMachine extends React.Component {
         }
 
         if (isValidKey(event.key)) {
-            document.getElementById(event.key.toLowerCase()).click();
+            let drumpadButton = document.getElementById(event.key.toLowerCase());
+            drumpadButton.click();
+            drumpadButton.focus();
         }
     }
 
