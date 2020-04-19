@@ -13,6 +13,12 @@
       grid-template-rows: repeat(3, 80%);
   }
 
+  .drumpad-style {
+    background-color: #202020;
+    border-color: #282c34;
+    color: white;
+  }
+
   .grid-item-one {
     grid-column: 1 / 1;
     grid-row: 1;
