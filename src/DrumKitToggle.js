@@ -9,7 +9,7 @@ class DrumKitToggle extends React.Component {
     }
 
     handleClick(event) {
-        console.log("clicked");
+        this.props.toggleDrumKit();
     }
 
     render() {

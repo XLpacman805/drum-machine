@@ -12,6 +12,7 @@ class DrumMachine extends React.Component {
             activeDrumKit: EightZeroEightDrumKit
         };
         this.handleKeyDown = this.handleKeyDown.bind(this);
+        this.toggleDrumKit = this.toggleDrumKit.bind(this);
     }
 
     handleKeyDown(event) {
@@ -68,6 +69,16 @@ class DrumMachine extends React.Component {
         }
     }
 
+    toggleDrumKit() {
+        let activeDrumKit = this.state.activeDrumKit;
+
+        if (activeDrumKit === EightZeroEightDrumKit) {
+            this.setState({activeDrumKit: ElectroSoulDrumKit});
+        } else {
+            this.setState({activeDrumKit: EightZeroEightDrumKit});
+        }
+    }
+
     componentDidMount() {
         document.addEventListener('keydown', this.handleKeyDown);
 
@@ -81,7 +92,7 @@ class DrumMachine extends React.Component {
         return ( 
             <div id="drum-machine">
                 <h2>Drumming Machine World</h2>
-                <DrumKitToggle />
+                <DrumKitToggle toggleDrumKit={this.toggleDrumKit} />
                 <div className="grid-container">
                     <Drumpad className="grid-item-one" text="q" audioPath={this.state.activeDrumKit[0]} />
                     <Drumpad className="grid-item-two" text="w" audioPath={this.state.activeDrumKit[1]} />
