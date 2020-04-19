@@ -14,7 +14,7 @@ class Drumpad extends React.Component {
 
     render() {
         return (
-            <button id={this.props.text} className={this.props.className} onClick={this.onClick} value={this.props.text}>{this.props.text.toUpperCase()}</button>
+            <button id={this.props.text} className={[this.props.className]} onClick={this.onClick} value={this.props.text}>{this.props.text.toUpperCase()}</button>
         );
     }
 }

@@ -65,7 +65,9 @@ class DrumMachine extends React.Component {
         }
 
         if (isValidKey(event.key)) {
-            document.getElementById(event.key.toLowerCase()).click();
+            let drumpadButton = document.getElementById(event.key.toLowerCase());
+            drumpadButton.click();
+            drumpadButton.focus();
         }
     }
 
@@ -91,20 +93,22 @@ class DrumMachine extends React.Component {
     render() {
         return ( 
             <div id="drum-machine">
-                <h2>Drumming Machine World</h2>
+                <h1>React Drum Machine</h1>
+                <h2>Use your keyboard or click on a drum pad to play a sound.</h2>
+                <h3>You can toggle between two drumkits by clicking the switch below</h3>
                 <DrumKitToggle toggleDrumKit={this.toggleDrumKit} />
                 <div className="grid-container">
-                    <Drumpad className="grid-item-one" text="q" audioPath={this.state.activeDrumKit[0]} />
-                    <Drumpad className="grid-item-two" text="w" audioPath={this.state.activeDrumKit[1]} />
-                    <Drumpad className="grid-item-three" text="e" audioPath={this.state.activeDrumKit[2]}/>
+                    <Drumpad className="drumpad-style grid-item-one" text="q" audioPath={this.state.activeDrumKit[0]} />
+                    <Drumpad className="drumpad-style grid-item-two" text="w" audioPath={this.state.activeDrumKit[1]} />
+                    <Drumpad className="drumpad-style grid-item-three" text="e" audioPath={this.state.activeDrumKit[2]}/>
 
-                    <Drumpad className="grid-item-four" text="a" audioPath={this.state.activeDrumKit[3]} />
-                    <Drumpad className="grid-item-five" text="s" audioPath={this.state.activeDrumKit[4]} />
-                    <Drumpad className="grid-item-six" text="d" audioPath={this.state.activeDrumKit[5]} />
+                    <Drumpad className="drumpad-style grid-item-four" text="a" audioPath={this.state.activeDrumKit[3]} />
+                    <Drumpad className="drumpad-style grid-item-five" text="s" audioPath={this.state.activeDrumKit[4]} />
+                    <Drumpad className="drumpad-style grid-item-six" text="d" audioPath={this.state.activeDrumKit[5]} />
 
-                    <Drumpad className="grid-item-seven" text="z" audioPath={this.state.activeDrumKit[6]} />
-                    <Drumpad className="grid-item-eight" text="x" audioPath={this.state.activeDrumKit[7]} />
-                    <Drumpad className="grid-item-nine" text="c" audioPath={this.state.activeDrumKit[8]} />
+                    <Drumpad className="drumpad-style grid-item-seven" text="z" audioPath={this.state.activeDrumKit[6]} />
+                    <Drumpad className="drumpad-style grid-item-eight" text="x" audioPath={this.state.activeDrumKit[7]} />
+                    <Drumpad className="drumpad-style grid-item-nine" text="c" audioPath={this.state.activeDrumKit[8]} />
                 </div>
             </div>
          );
