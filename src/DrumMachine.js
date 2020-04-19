@@ -93,7 +93,9 @@ class DrumMachine extends React.Component {
     render() {
         return ( 
             <div id="drum-machine">
-                <h2>Drumming Machine World</h2>
+                <h1>React Drum Machine</h1>
+                <h2>Use your keyboard or click on a drum pad to play a sound.</h2>
+                <h3>You can toggle between two drumkits by clicking the switch below</h3>
                 <DrumKitToggle toggleDrumKit={this.toggleDrumKit} />
                 <div className="grid-container">
                     <Drumpad className="drumpad-style grid-item-one" text="q" audioPath={this.state.activeDrumKit[0]} />
